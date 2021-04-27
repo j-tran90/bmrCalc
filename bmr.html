@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="StyleSheet.css">
+</head>
+<body>
+    <div class="tab" id="tab">
+        <button id="metricbutton" class="tablinks" onclick="openUnit(event, 'metric')">Metric</button>
+        <button id="imperialbutton" class="tablinks" onclick="openUnit(event, 'imperial')">Imperial</button>
+    </div>
+
+        <div id="metric" class="tabcontent">
+            <table id="maintable">
+                <td>
+                    <label for="Gender">Gender&nbsp;&nbsp;</label>
+                    <select id="Gender" name="Gender">
+                        <option value="Male">Male</option>
+                        <option value="Female" selected>Female</option>
+                    </select><br /><br />
+
+                    <label for="age">Age&nbsp;</label>
+                    <input class="required" type="number" id="age" name="age" min="1" max="100" maxlength="3" value="30"><br /><br />
+                </td>
+                <tr>
+                    <td>
+                        <label for="height">Height&nbsp;&nbsp;&nbsp; </label>
+                        <input type="number" id="height" name="height" min="1" max="300" value="160"> cm
+                        <br /><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="weight">Weight&nbsp;&nbsp; </label>
+                        <input type="number" id="weight" name="weight" min="1" max="350" value="50"> kg<br /><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="level">Your Activity Level:&nbsp;</label><br /><br />
+                        <input type="radio" value="" name="activityLevel" id="activityLevel1" checked> I am sedentary (little or no exercise)<br />
+                        <input type="radio" value="" name="activityLevel" id="activityLevel2">
+                        I am lightly active (light exercise or sports 1-3 days per week)<br />
+                        <input type="radio" value="" name="activityLevel" id="activityLevel3">
+                        I am moderately active (moderate exercise or sports 3-5 days per week)<br />
+                        <input type="radio" value="" name="activityLevel" id="activityLevel4">
+                        I am very active (hard exercise or sports 6-7 days per week)<br />
+                        <input type="radio" value="" name="activityLevel" id="activityLevel5">
+                        I am super active (very hard exercise or sports and a physical job or 2x training)<br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            <input id="submit" type="button" value="Click to Calculate"
+                                   onclick="metric()">
+                        </p>
+                        <p id="lblResult">BMR</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="imperial" class="tabcontent">
+            <table id="sectable">
+                <td>
+                    <label for="Gender2">Gender&nbsp;&nbsp;</label>
+                    <select id="Gender2" name="Gender2">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select><br /><br />
+
+                    <label for="age2">Age&nbsp;</label>
+                    <input class="required" type="number" id="age2" name="age2" min="1" max="100" maxlength="3" value="30"><br /><br />
+                </td>
+                <tr>
+                    <td>
+                        <label for="height2">Height&nbsp; </label>
+                        <!--<input type="number" id="feet" name="feet" min="1" max="8" value="5"> feet-->&nbsp;
+                        <input type="number" id="height2" name="height2" min="1" max="200" value="64"> inches
+                        <br /><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="weight2">Weight&nbsp;&nbsp; </label>
+                        <input type="number" id="weight2" name="weight2" min="1" max="400" value="110"> lbs<br /><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="level">Your Activity Level: &nbsp;</label><br /><br />
+
+                        <input type="radio" value="" name="activityLeveli" id="activityLevel1i" checked> I am sedentary (little or no exercise)<br />
+                        <input type="radio" value="" name="activityLeveli" id="activityLevel2i">
+                        I am lightly active (light exercise or sports 1-3 days per week)<br />
+                        <input type="radio" value="" name="activityLeveli" id="activityLevel3i">
+                        I am moderately active (moderate exercise or sports 3-5 days per week)<br />
+                        <input type="radio" value="" name="activityLeveli" id="activityLevel4i">
+                        I am very active (hard exercise or sports 6-7 days per week)<br />
+                        <input type="radio" value="" name="activityLeveli" id="activityLevel5i">
+                        I am super active (very hard exercise or sports and a physical job or 2x training)<br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            <input id="submit2" type="button" value="Click to Calculate"
+                                   onclick="imperial()">
+                        </p>
+                        <p id="lblResult2">BMR</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <script src="bmr.js"></script>
+</body>
+
+</html>
